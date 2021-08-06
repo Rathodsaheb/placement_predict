@@ -22,7 +22,7 @@ def index():
     if request.method == 'POST':
         form_data = request.form.to_dict()
         b = pd.DataFrame(form_data, index=[0])
-        filename = 'RF_model.sav'
+        filename = 'RF_model.pkl'
         loaded_model = pickle.load(open(filename, 'rb'))
         predict = loaded_model.predict(b)
         p = float(predict)
