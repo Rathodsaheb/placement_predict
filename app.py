@@ -32,7 +32,7 @@ def index():
         else:
             f = 'The candidate is not placed'
 
-        return render_template("presult.html", prediction=f)
+        return render_template("placement_html.html", prediction=f)
 
 
 if __name__ == '__main__':
